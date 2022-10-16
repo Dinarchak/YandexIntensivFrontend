@@ -14,6 +14,12 @@ main{
 	justify-content: center;
 }
 
+.logo {
+	height: auto;
+	width: 100%;
+}
+
+
 .search {
 	position: relative;
 	background: rgb(255, 201, 61);
@@ -43,11 +49,6 @@ main{
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-
-.logo {
-	height: auto;
-	width: 100%;
 }
 
 img {
