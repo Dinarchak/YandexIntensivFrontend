@@ -17,12 +17,12 @@
         "rxjs": "^7.1.0"
     },
     "scripts": {
-        "start": "echo \"implement me\"",
-        "build": "echo \"implement me\"",
+        "start": "webpack-dev-server",
+        "build": "echo SET NODE_ENV='production' && webpack",
         "test": "echo \"implement me\"",
-        "lint:js": "echo \"implement me\"",
-        "lint:css": "echo \"implement me\"",
-        "analyze": "echo \"implement me\"",
+        "lint:js": "eslint . --ext .tsx,.ts,.js,.jsx --fix",
+        "lint:css": "stylelint \"**/*.css\"",
+        "analyze": "webpack --json stats.json",
         "validate": "node_modules/.bin/statoscope validate -i stats.json --config=./statoscope.config.js"
     },
     "devDependencies": {
