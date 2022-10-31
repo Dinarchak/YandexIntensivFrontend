@@ -1,14 +1,14 @@
 import './App.css';
-import Title from './components/Title.js'
-import Text from'./components/Text.js'
+import Menu from './components/BookList/BooksList.js'
+import BooksList from'./components/Menu/Menu.js'
 
 function App() {
     return (
-        <section>
-            <Title/>
-            <Text/>
-        </section>
-    );
+        <div>
+            <Menu/>
+            <BooksList/>
+        </div>
+    );  
 }
 
 export default App;
