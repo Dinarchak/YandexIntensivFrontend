@@ -1,9 +1,14 @@
 import './App.css';
+import Title from './components/Title.js'
+import Text from'./components/Text.js'
 
 function App() {
-  return (
-    <h1>Привет, мир!</h1>
-  );
+    return (
+        <section>
+            <Title/>
+            <Text/>
+        </section>
+    );
 }
 
 export default App;
