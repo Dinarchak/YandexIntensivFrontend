@@ -1,4 +1,4 @@
-export const books = [
+const books = [
 	{
 		id: 1,
 		name: "Несносное проклятье некроманта",
@@ -32,3 +32,5 @@ export const books = [
 		price: 250
 	},
 ]
+
+export default books
