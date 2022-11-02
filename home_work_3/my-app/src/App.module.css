@@ -1,0 +1,17 @@
+.mainBlock {
+	display: flex;
+	flex-direction: row;
+	width: 95vw;
+	margin: 20px auto;
+}
+
+.menu {
+	height: 80vh;
+	margin: 0 10px 0 0;
+	padding: 15px;
+}
+
+.books {
+	padding: 15px;
+	width: 100%;
+}

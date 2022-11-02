@@ -1,10 +1,12 @@
 import Genres from '../Genres/Genres.js'
+import classnames from 'classnames'
+import template_styles from '../../constants/template_styles.module.css'
 
 function Menu(props) {
-	return 	<> 
-				<h2>Художественная литература</h2>
+	return 	(<> 
+				<p className={template_styles.subTitle}>Художественная&nbsp;литература</p>
 				<Genres genres={props.params}/>
-			</>
+			</>)
 
 }
 

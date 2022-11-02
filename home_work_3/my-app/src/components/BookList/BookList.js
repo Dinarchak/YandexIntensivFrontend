@@ -1,8 +1,9 @@
 import Book from '../Book/Book.js'
 
+function get_item(i) {
+	return <Book params={i} key={i.id}></Book>
+}
+
 export default (props) => {
-	console.log(props.books)
-	return props.books.map(function f(i) {
-		return <div key={i.key}><Book params={i}></Book></div>
-	})
+	return props.books.map(get_item)
 }

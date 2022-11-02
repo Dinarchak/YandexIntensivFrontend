@@ -1,6 +1,11 @@
+import classnames from 'classnames'
+import template_styles from '../../constants/template_styles.module.css'
+import styles from './styles.module.css'
+
+function get_item(i) {
+	return <p key={i.id} className={classnames(template_styles.text, styles.genre)}>{i.name}</p>
+}
+
 export default function(props) {
-	console.log(props.genres)
-	return props.genres.map(function f(i) {
-		return <><p key={i.id}>{i.name}</p></>
-	})
+	return props.genres.map(get_item)
 }

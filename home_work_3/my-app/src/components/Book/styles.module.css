@@ -1,0 +1,40 @@
+.book {
+	position: relative;
+}
+
+.itemList {
+	margin: 10px 0;
+}
+
+.itemList__item {
+	color: #00000080;
+	display: inline-block;
+	margin: 0 0 5 0;
+}
+
+
+.itemList__item:after {
+	color: #00000080;
+	content: ',';
+}
+
+.itemList .itemList__item:last-child:after {
+	content: "";
+}
+
+.book__buyForm {
+	position: absolute;
+	right: 5%;
+	top: 50%;
+}
+
+.book__increment, .book__decrement {
+	border-radius: 5px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+
+.book__counter {
+	margin: 0 10px;
+}
