@@ -1,7 +1,7 @@
 import Book from '../Book/Book.js'
 
 function get_item(i) {
-	return <Book params={i} key={i.id}></Book>
+	return <Book params={i} key={i.id} bottom={false}></Book>
 }
 
 export default (props) => {

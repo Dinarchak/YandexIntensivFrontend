@@ -1,14 +1,17 @@
 import './App.css';
 import genres from  './constants/genres.js'
 import books from './constants/books.js'
+import description from './constants/book_description.js'
 import BookList from './components/BookList/BookList.js'
+import Book from './components/Book/Book.js'
+import Comments from './components/Comments/Comments.js'
+import Book_page from './components/Book_page/Book_page.js'
 import styles from './App.module.css'
 import classnames from 'classnames'
 import template_styles from './constants/template_styles.module.css'
 import {useState} from 'react'
 
-
-function App() {
+function App() { 
     const [selectedGenre, setSelectedGenre] = useState(genres[0])
     return (
         <>
@@ -23,4 +26,11 @@ function App() {
         </>
     );  
 }
+
+// function App() {
+//     const [selectedGenre, setSelectedGenre] = useState(genres[0])
+//     console.log(books[0])
+//     return <Book_page books={books} description={description}/>
+// }
+
 export default App;

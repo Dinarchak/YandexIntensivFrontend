@@ -1,8 +1,8 @@
 .mainBlock {
 	display: flex;
 	flex-direction: row;
-	width: 95vw;
-	margin: 20px auto;
+	width: 100%;
+	padding: 20px 5%;
 }
 
 .menu {
@@ -10,10 +10,12 @@
 	margin: 0 10px 0 0;
 	padding: 15px;
 	flex: 2;
+	background: #FFFFFF;
+	border-radius: 15px;
 }
 
 .books {
-	padding: 15px;
+	padding: 0 15px;
 	flex: 7;
 }
 

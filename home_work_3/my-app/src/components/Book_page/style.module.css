@@ -1,0 +1,21 @@
+.description {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.description > * {
+	flex: 1;
+}
+
+.annotations {
+	background: #FFFFFF;
+	border-radius: 15px;
+	padding: 0 20px;
+	margin-left: 20px;
+}
+
+.mainBlock {
+	width: 90vw;
+	margin: auto;
+}

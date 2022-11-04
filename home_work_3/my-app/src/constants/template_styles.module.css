@@ -1,26 +1,29 @@
-	.counterBtn {
-		color: #FFFFFF;
-		background: #000000;
-		font-size: 1.2rem;
-	}
+.counterBtn {
+	color: #FFFFFF;
+	background: #000000;
+	font-size: 1.2rem;
+}
 
-	.counterBtn:disabled {
-		background: #00000080;	
-	}
+.counterBtn:disabled {
+	background: #00000080;	
+}
 
 .text {
 	font-size: 0.9rem;
 	line-height: 1rem;
 	font-weight: 400;
+	margin: 5px 0;
 }
 
 .title {
 	font-size: 1.2rem;
 	font-weight: 700;
+	margin: 20px 0;
 }
 
 .subTitle {
 	font-weight: 700;
 	font-size: 0.9rem;	
 	text-decoration: bold;
+	margin: 5px 0;
 }

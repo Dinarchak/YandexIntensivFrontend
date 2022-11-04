@@ -1,5 +1,9 @@
 .book {
 	position: relative;
+	background: #FFFFFF;
+	border-radius: 15px;
+	margin: 0 0 15px 0;
+	padding: 20px;
 }
 
 .itemList {
@@ -25,7 +29,11 @@
 .book__buyForm {
 	position: absolute;
 	right: 5%;
-	top: 50%;
+	bottom: 45%;
+}
+
+.book__buyForm.bottom {
+	bottom: 5%;	
 }
 
 .book__increment, .book__decrement {
