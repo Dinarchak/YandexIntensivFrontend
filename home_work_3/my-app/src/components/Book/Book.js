@@ -23,7 +23,7 @@ export default (props) => {
 						<button className={classnames(style.book__decrement, template_styles.counterBtn)} onClick={() => setCount(count - 1)} disabled={count == 0}>-</button>
 						<span className={style.book__counter}>{count}</span>
 						<button className={classnames(style.book__increment, template_styles.counterBtn)} onClick={() => setCount(count + 1)} disabled={count == 5}>+</button>
-					</div>
+					</div>	
 				</div>
 			</div>)
 }

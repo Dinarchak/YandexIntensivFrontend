@@ -9,9 +9,18 @@
 	height: 80vh;
 	margin: 0 10px 0 0;
 	padding: 15px;
+	flex: 2;
 }
 
 .books {
 	padding: 15px;
+	flex: 7;
+}
+
+.genre {
+	display: block;
+	padding: 0 0 20px 0;
+	background: none;
 	width: 100%;
+	text-align: left;
 }

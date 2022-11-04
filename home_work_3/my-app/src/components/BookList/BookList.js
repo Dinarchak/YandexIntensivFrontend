@@ -5,5 +5,6 @@ function get_item(i) {
 }
 
 export default (props) => {
-	return props.books.map(get_item)
+	return props.books[props.selected.id].map(get_item)
+
 }
