@@ -1,12 +1,12 @@
-.counterBtn {
-	color: #FFFFFF;
-	background: #000000;
-	font-size: 1.2rem;
-}
+	.counterBtn {
+		color: #FFFFFF;
+		background: #000000;
+		font-size: 1.2rem;
+	}
 
-.counterBtn:disabled {
-	background: #00000080;	
-}
+	.counterBtn:disabled {
+		background: #00000080;	
+	}
 
 .text {
 	font-size: 0.9rem;
