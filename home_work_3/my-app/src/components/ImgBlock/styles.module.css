@@ -1,0 +1,8 @@
+.imgBlock {
+    width: 30px;
+}
+
+.imgBlock img {
+    width: 100%;
+    header: auto;
+}
