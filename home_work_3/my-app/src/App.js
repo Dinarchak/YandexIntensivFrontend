@@ -16,28 +16,28 @@ import Book from './components/Book/Book.js'
 import Comments from './components/Comments/Comments.js'
 import BookPage from './components/BookPage/BookPage.js'
 
-// function App() { 
-//     const [selectedGenre, setSelectedGenre] = useState(genres[0])
-//     return (
-//         <>
-//             <Header/>
-//             <div className={styles.mainBlock}>
-//                 <div className={styles.menu}>
-//                     {genres.map((i) => <button className={classnames(styles.genre, {[template_styles.subTitle]:selectedGenre.id == i.id})} onClick={(j) => setSelectedGenre(i)} key={i.id}>{i.name}</button>)}
-//                 </div>
-//                 <div className={styles.books}>
-//                     <BookList books={books} selected={selectedGenre}/>
-//                 </div>
-//             </div>
-//         </>
-//     );  
-// }
-
-function App() {
-    return <>
+function App() { 
+    const [selectedGenre, setSelectedGenre] = useState(genres[0])
+    return (
+        <>
             <Header/>
-            <BookPage books={books} description={description}/>
+            <div className={styles.mainBlock}>
+                <div className={styles.menu}>
+                    {genres.map((i) => <button className={classnames(styles.genre, {[template_styles.subTitle]:selectedGenre.id == i.id})} onClick={(j) => setSelectedGenre(i)} key={i.id}>{i.name}</button>)}
+                </div>
+                <div className={styles.books}>
+                    <BookList books={books} selected={selectedGenre}/>
+                </div>
+            </div>
         </>
+    );  
 }
+
+// function App() {
+//     return <>
+//             <Header/>
+//             <BookPage books={books} description={description}/>
+//         </>
+// }
 
 export default App;

@@ -25,24 +25,3 @@
 .itemList .itemList__item:last-child:after {
 	content: "";
 }
-
-.book__buyForm {
-	position: absolute;
-	right: 5%;
-	bottom: 45%;
-}
-
-.book__buyForm.bottom {
-	bottom: 5%;	
-}
-
-.book__increment, .book__decrement {
-	border-radius: 5px;
-	text-align: center;
-	width: 30px;
-	height: 30px;
-}
-
-.book__counter {
-	margin: 0 10px;
-}

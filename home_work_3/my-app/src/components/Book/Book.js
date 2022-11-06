@@ -1,7 +1,7 @@
-import {useState} from 'react'
 import style from './styles.module.css'
 import classnames from 'classnames'
 import template_styles from '../../constants/template_styles.module.css'
+import Counter from '../Counter/Counter.js'
 
 
 function get_item(i) {
@@ -9,7 +9,6 @@ function get_item(i) {
 }
 
 export default (props) => {
-	const [count, setCount] = useState(0)
 	return	(<div className={style.book}>
 				<h3 className={template_styles.title}>{props.params.name}</h3>
 				<div>
@@ -20,11 +19,7 @@ export default (props) => {
 						{props.params.genres.map(get_item)}	
 					</ul>
 					<h2 className={template_styles.title}>{props.params.price}&nbsp;₽</h2>
-					<div className={classnames(style.book__buyForm, {[style.bottom]:props.bottom})}>
-						<button className={classnames(style.book__decrement, template_styles.counterBtn)} onClick={() => setCount(count - 1)} disabled={count === 0}>-</button>
-						<span className={style.book__counter}>{count}</span>
-						<button className={classnames(style.book__increment, template_styles.counterBtn)} onClick={() => setCount(count + 1)} disabled={count === 5}>+</button>
-					</div>	
+					<Counter bottom={props.bottom}/>
 				</div>
 			</div>)
 }
