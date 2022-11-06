@@ -143,7 +143,7 @@ const books = [
 			authors: [
 						{
 							id: 1,
-							name: " Виктор Глухов"
+							name: "Виктор Глухов"
 						}
 					],
 			genres: [
