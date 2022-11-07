@@ -4,11 +4,13 @@ import template_styles from '../../constants/template_styles.module.css'
 import Counter from '../Counter/Counter.js'
 
 
-function get_item(i) {
-	return <li className={classnames(style.itemList__item, template_styles.text)} key={i.id}>{i.name}</li>
+function get_item(i, k) {
+	return <li className={classnames(style.itemList__item, template_styles.text)} key={k}>{i}</li>
 }
 
 export default (props) => {
+	console.log(props.params.authors)
+
 	return	(<div className={style.book}>
 				<h3 className={template_styles.title}>{props.params.name}</h3>
 				<div>

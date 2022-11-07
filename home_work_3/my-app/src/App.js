@@ -16,10 +16,15 @@ import Book from './components/Book/Book.js'
 import Comments from './components/Comments/Comments.js'
 import BookPage from './components/BookPage/BookPage.js'
 
+import {Provider}  from 'react-redux'
+import {store} from './store/index.js'
+
+
 function App() { 
     const [selectedGenre, setSelectedGenre] = useState(genres[0])
+
     return (
-        <>
+        <Provider store={store}>
             <Header/>
             <div className={styles.mainBlock}>
                 <div className={styles.menu}>
@@ -29,7 +34,7 @@ function App() {
                     <BookList books={books} selected={selectedGenre}/>
                 </div>
             </div>
-        </>
+        </Provider>
     );  
 }
 
