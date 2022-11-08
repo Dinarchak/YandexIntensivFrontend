@@ -1,0 +1,28 @@
+.mainBlock {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 20px 5%;
+}
+
+.menu {
+	height: 80vh;
+	margin: 0 10px 0 0;
+	padding: 15px;
+	flex: 2;
+	background: #FFFFFF;
+	border-radius: 15px;
+}
+
+.books {
+	padding: 0 15px;
+	flex: 7;
+}
+
+.genre {
+	display: block;
+	padding: 0 0 20px 0;
+	background: none;
+	width: 100%;
+	text-align: left;
+}
