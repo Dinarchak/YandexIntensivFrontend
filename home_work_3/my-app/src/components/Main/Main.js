@@ -13,22 +13,17 @@ import BookList from '../../components/BookList/BookList.js'
 import Book from '../../components/Book/Book.js'
 
 function Main(props) {
-
 	const dispatch = useDispatch()
     useEffect(() => {
         dispatch(loadCategoriesIfNotExist)
     }, [])
-    const categories = useSelector(selectCategories) 
-    //{categories.map((i) => <button className={classnames(styles.genre, {[template_styles.subTitle]:selectedCategory.id === i.id})} onClick={(j) => setSelectedCategory(i)} key={i.id}>{i.name}</button>)}
+    const categories = useSelector(selectCategories)
     const [selectedCategory, setSelectedCategory] = useState(categories[0])
 
 	return <>
 		<div className={styles.mainBlock}>
 			<div className={styles.menu}>
-				{
-					console.log(selectedCategory)
-					// categories.map((i) => {console.log(i)})
-				}	
+				{categories.map((i) => <button className={styles.genre} onClick={(j) => setSelectedCategory(i)} key={i.id}>{i.name}</button>)}
 			</div>
 			<div className={styles.books}>
 				<BookList selected={selectedCategory}/>
