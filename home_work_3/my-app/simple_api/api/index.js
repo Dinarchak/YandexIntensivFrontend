@@ -6,6 +6,10 @@ router.get("/books", (req, res, next) => {
   reply(res, books);
 });
 
+router.get("/categories", (req, res, next) => {
+  reply(res, categories)
+})
+
 // router.get("/films", (req, res, next) => {
 //   const { cinemaId, filmId } = req.query;
 //   let result = films;

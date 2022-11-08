@@ -15,7 +15,6 @@ function BookList(props) {
 		dispatch(loadBooksIfNotExist)
 	}, [])
 	const books = useSelector(selectBooks)
-	console.log(books)
 	return books.map(get_item)
 }
 

@@ -9,8 +9,6 @@ function get_item(i, k) {
 }
 
 export default (props) => {
-	console.log(props.params.authors)
-
 	return	(<div className={style.book}>
 				<h3 className={template_styles.title}>{props.params.name}</h3>
 				<div>

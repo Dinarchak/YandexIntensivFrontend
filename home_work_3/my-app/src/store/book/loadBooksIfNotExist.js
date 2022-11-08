@@ -11,9 +11,7 @@ export const loadBooksIfNotExist = (dispatch, getState) => {
 	fetch('http://localhost:3001/api/books')
 	.then((response) => response.json())
 	.then((res) => {
-		let a = prepareData(res)
-		console.log(a)
-		dispatch(bookSlice.actions.successLoading(a))
+		dispatch(bookSlice.actions.successLoading(prepareData(res)))
 	})
 	.catch(() => {
 		dispatch(bookSlice.actions.failLoading())
