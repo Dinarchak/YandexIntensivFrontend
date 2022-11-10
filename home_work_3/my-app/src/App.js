@@ -7,19 +7,20 @@ import BookPage from './components/BookPage/BookPage.js'
 import {Provider}  from 'react-redux'
 import {store} from './store/index.js'
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 
 function App() { 
-    // const dispatch = useDispatch()
-    // useEffect(() => {
-    //     dispatch(loadCategoriesIfNotExist)
-    // }, [])
-    // const categories = useSelector(selectCategories) 
-    // const [selectedCategory, setSelectedCategory] = useState(categories[0])
-
     return (
         <Provider store={store}>
-            <Header/>
-            <Main/>
+            <BrowserRouter>
+                <Header/>
+                <Routes>
+                    <Route index element={<Main/>}/>
+                    <Route path="cart" element={"Корзина"}/>
+                    <Route path=":bookId" element={<BookPage/>}/>
+                </Routes>
+            </BrowserRouter>
         </Provider>
     );  
 }
@@ -27,7 +28,7 @@ function App() {
 // function App() {
 //     return <>
 //             <Header/>
-//             <BookPage books={books} description={description}/>
+//
 //         </>
 // }
 

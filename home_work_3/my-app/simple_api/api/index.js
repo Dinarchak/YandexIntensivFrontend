@@ -1,13 +1,27 @@
 const router = require("express").Router();
 const { books, genres, categories, reviews, users } = require("./mock");
-const { reply, getById } = require("./utils");
+const { reply, getById, getByCategory, getReviewsByBook } = require("./utils");
 
 router.get("/books", (req, res, next) => {
-  reply(res, books);
+  const { category, id } = req.query
+    let needBooks = []
+  if (category != undefined) {
+    needBooks = getByCategory(books)(Number(category))
+  } else if (id != undefined) {
+    needBooks = [getById(books)(Number(id))]
+  }
+  reply(res, needBooks);
 });
 
 router.get("/categories", (req, res, next) => {
   reply(res, categories)
+})
+
+router.get("/reviews", (req, res, next) => {
+  const needBook = Number(req.query.bookId)
+  let needReviews = getReviewsByBook(reviews)(getById(books)(needBook).reviews)
+  console.log(needBook)
+  reply(res, needReviews)
 })
 
 // router.get("/films", (req, res, next) => {

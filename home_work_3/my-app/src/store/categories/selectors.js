@@ -1,3 +1,5 @@
+import {Statuses} from '../../constants/statuses.js'
+
 function selectedCategoriesModule(state) {
 	return state.categories
 }
@@ -6,5 +8,8 @@ function selectCategories(state) {
 	return Object.values(selectedCategoriesModule(state).entities)
 }
 
-export default selectedCategoriesModule
-export { selectCategories }
+function selectIsCategoriesLoading(state) {
+	return selectedCategoriesModule(state).status === Statuses.inProgress
+}
+
+export {selectedCategoriesModule, selectCategories, selectIsCategoriesLoading}

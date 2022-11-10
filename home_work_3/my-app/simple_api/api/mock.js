@@ -60,18 +60,21 @@ const normalizedReviews = [
   {
     id: 0,
     userId: 'a304959a-76c0-4b34-954a-b38dbf310360',
+    username: 'Antony',
     text: 'Not bad',
     rating: 5,
   },
   {
     id: 1,
     userId: 'dfb982e9-b432-4b7d-aec6-7f6ff2e6af54',
+    username: 'Sam',
     text: 'Грязно',
     rating: 3,
   },
   {
     id: 2,
     userId: '20bed9b5-9c7b-4771-8221-75b74ed1904a',
+    username: 'Diana',
     text: 'Хороший попкорн',
     rating: 5,
   },
@@ -79,23 +82,27 @@ const normalizedReviews = [
     id: 3,
     userId: 'dfb982e9-b432-4b7d-aec6-7f6ff2e6af54',
     text: 'Жесткие стулья',
+    username: 'Sam',
     rating: 4,
   },
   {
     id: 4,
     userId: 'c3d4abd4-c3ef-46e1-8719-eb17db1d6e99',
+    username: 'Lolly',
     text: 'Отличный звук',
     rating: 5,
   },
   {
     id: 5,
     userId: '52a63cc0-5a6f-41f3-9774-0161ea4c9b0c',
+    username: 'Agata',
     text: 'Удобное расположение',
     rating: 5,
   },
   {
     id: 6,
     userId: '52a63cc0-5a6f-41f3-9774-0161ea4c9b0c',
+    username: 'Agata',
     text: 'Глубокий смылс',
     rating: 5,
   }
@@ -234,4 +241,4 @@ module.exports = {
   categories: normalizedCategories,
   reviews: normalizedReviews,
   users: normalizedUsers,
-};
+}

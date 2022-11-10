@@ -6,4 +6,10 @@ const reply = (res, body, timeout = 1000, status = 200) =>
 const getById = (entities) => (id) =>
   entities.find((entity) => entity.id === id);
 
-module.exports = { reply, getById };
+const getByCategory = (entities) => (cat) =>
+  entities.filter((entity) => entity.category === cat);
+
+const getReviewsByBook = (reviews) => (ids) => 
+  reviews.filter((review) => ids.includes(review.id))
+
+module.exports = { reply, getById, getByCategory, getReviewsByBook };

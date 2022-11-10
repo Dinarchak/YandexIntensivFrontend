@@ -3,8 +3,8 @@ import styles from './styles.module.css'
 
 function get_item(i) {
 	return  <div className={styles.comment} key={i.id}>
-				<h2 className={template_styles.subTitle}>{i.author}</h2>
-				<p className={template_styles.text}>{i.comment}</p>
+				<h2 className={template_styles.subTitle}>{i.username}</h2>
+				<p className={template_styles.text}>{i.text}</p>
 			</div>	
 }
 
