@@ -26,7 +26,7 @@ function BooksInBasket(props) {
 				<h2 className={template_styles.subTitle}>
 					{get_sum(props.books, props.cart)}
 				</h2>
-				<button type="submit" className={classnames(template_styles.counterBtn, styles.byBtn)}>Купить</button>
+				<button type="submit" disabled={!props.books.length} className={classnames(template_styles.counterBtn, styles.byBtn)}>Купить</button>
 			</div>
 		</>
 }

@@ -22,7 +22,7 @@ export default function(props) {
 	const book = useSelector((state) => selectBookById(state, bookId))
 	const reviews = useSelector(selectReviews)
 	if (isLoading) {
-		return <h1 className={template_styles.title}>Loading...</h1>
+		return <h1 className={template_styles.loadingTitle}>Loading...</h1>
 	}
 	return (<> 
 				<div className={styles.mainBlock}>

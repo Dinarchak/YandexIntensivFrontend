@@ -30,9 +30,7 @@ function Main(props) {
     const books = useSelector(selectBooks)
     if (isBooksLoading || isCategotiesLoading) {
     	return <>
-    			<div className={styles.mainBlock}>
-					<h1 className={template_styles.title}>Loading...</h1>
-				</div>
+				<h1 className={template_styles.loadingTitle}>Loading...</h1>
     			</>
     }
 

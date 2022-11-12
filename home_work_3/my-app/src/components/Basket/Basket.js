@@ -22,7 +22,7 @@ function Basket(props) {
 	const books = useSelector(selectBooks)
 	const isLoading = useSelector(selectIsBooksLoading)
 	if (isLoading) {
-		return <h1 className={template_styles.title}>Loading...</h1>
+		return <h1 className={template_styles.loadingTitle}>Loading...</h1>
 	}
 
 	return <>
