@@ -6,4 +6,8 @@ function selectBooksCount(state, bookId) {
 	return selectedCartModule(state)[bookId]
 }
 
-export { selectedCartModule, selectBooksCount }
+function selectBooksIds(state) {
+	return Object.keys(selectedCartModule(state))
+}
+
+export { selectedCartModule, selectBooksCount, selectBooksIds }

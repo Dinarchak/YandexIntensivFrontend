@@ -149,7 +149,7 @@ const normalizedBooks = [
         genres: ["Фентези", "Детектив"],
         category: 0,
         price: 250,
-        reviews: ["Мистика", "Любовный роман"],
+        reviews: [2, 4, 6],
         id: 1
     },
     {

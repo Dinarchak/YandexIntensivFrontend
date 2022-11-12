@@ -7,7 +7,6 @@ export const loadBook = (id) => (dispatch, getState) => {
 		.then((response) => response.json())
 		.then((res) => {
 			let a = prepareData(res)
-			console.log(a)
 			dispatch(bookSlice.actions.successLoading(a))
 		})
 		.catch(() => {

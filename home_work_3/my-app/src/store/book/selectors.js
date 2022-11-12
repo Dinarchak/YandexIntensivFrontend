@@ -17,8 +17,13 @@ function selectIsBooksLoaded(state) {
 }
 
 function selectBookById(state, id) {
-	console.log(selectedBookModule(state).entities)
 	return selectedBookModule(state).entities[id]
 }
 
-export { selectedBookModule, selectBooks, selectIsBooksLoading, selectBookById, selectIsBooksLoaded }
+export { 
+			selectedBookModule,
+			selectBooks,
+			selectIsBooksLoading, 
+			selectBookById, 
+			selectIsBooksLoaded
+		}

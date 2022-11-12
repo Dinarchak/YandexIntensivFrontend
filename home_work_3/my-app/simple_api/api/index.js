@@ -13,6 +13,15 @@ router.get("/books", (req, res, next) => {
   reply(res, needBooks);
 });
 
+router.get("/books/ids", (req, res, next) => {
+  const params = req.query
+  const needBooks = []
+  for (let i in params) {
+    needBooks.push(getById(books)(Number(params[i])))
+  } 
+  reply(res, needBooks);
+});
+
 router.get("/categories", (req, res, next) => {
   reply(res, categories)
 })

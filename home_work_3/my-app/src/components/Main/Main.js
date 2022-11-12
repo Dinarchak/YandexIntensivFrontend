@@ -9,6 +9,9 @@ import {selectCategories, selectIsCategoriesLoading} from '../../store/categorie
 import {useEffect} from 'react'
 import {loadCategoriesIfNotExist} from '../../store/categories/loadCategoriesIfNotExist.js'
 
+import {selectBooks, selectIsBooksLoading} from '../../store/book/selectors'
+import {loadBooksIfNotExist} from '../../store/book/loadBooksIfNotExist.js'
+
 import BookList from '../../components/BookList/BookList.js'
 import Book from '../../components/Book/Book.js'
 
@@ -19,12 +22,16 @@ function Main(props) {
     }, [])
     const categories = useSelector(selectCategories)
     const [selectedCategory, setSelectedCategory] = useState(0)
-    const isLoading = useSelector(selectIsCategoriesLoading)
-
-    if (isLoading) {
+    useEffect(() => {
+		dispatch(loadBooksIfNotExist(selectedCategory))
+	}, [selectedCategory])
+    const isCategotiesLoading = useSelector(selectIsCategoriesLoading)
+    const isBooksLoading = useSelector(selectIsBooksLoading)
+    const books = useSelector(selectBooks)
+    if (isBooksLoading || isCategotiesLoading) {
     	return <>
     			<div className={styles.mainBlock}>
-					<h1 className={template_styles.title}>Loading</h1>
+					<h1 className={template_styles.title}>Loading...</h1>
 				</div>
     			</>
     }
@@ -42,7 +49,7 @@ function Main(props) {
 				}
 			</div>
 			<div className={styles.books}>
-				<BookList selected={selectedCategory}/>
+				<BookList books={books}/>
 			</div>
 		</div>
 		</>

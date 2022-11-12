@@ -1,0 +1,19 @@
+.bookPrice {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0;
+}
+
+.totalPrice {
+	margin: 0;
+	width: 90%;
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+}
+
+.byBtn {
+	font-size: 1rem;
+	padding: 5px;
+	border-radius: 5px;
+}
