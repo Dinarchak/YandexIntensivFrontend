@@ -54,12 +54,3 @@ function Main(props) {
 }
 
 export default Main
-
-// {
-// 	categories.map((i) => 
-// 		<button className={classnames(styles.genre, {[template_styles.subTitle]:selectedCategory.id === i.id})}
-// 				onClick={(j) => setSelectedCategory(i)} 
-// 				key={i.id}>
-// 			{i.name}
-// 		</button>)
-// }
