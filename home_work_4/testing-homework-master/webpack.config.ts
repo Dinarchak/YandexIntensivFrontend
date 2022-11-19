@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const isProduction = process.env.NODE_ENV == 'production';
@@ -17,6 +18,7 @@ const config: webpack.Configuration = {
             template: 'src/static/index.html',
         }),
         new MiniCssExtractPlugin(),
+        "@babel/plugin-syntax-jsx"
     ],
     module: {
         rules: [
