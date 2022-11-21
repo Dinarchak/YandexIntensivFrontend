@@ -1,4 +1,5 @@
 {
+    "moduleResolution": "NodeNext",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
